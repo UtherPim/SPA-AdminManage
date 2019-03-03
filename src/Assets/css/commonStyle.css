@@ -1,0 +1,12 @@
+.font-center{
+    text-align: center
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center
+}
+
+.boxSizing{
+    box-sizing: border-box;
+}

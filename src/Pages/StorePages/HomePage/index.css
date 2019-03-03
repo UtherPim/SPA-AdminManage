@@ -1,0 +1,46 @@
+.outBox {
+    background-color: #f9f3f2;
+}
+
+.contain {
+    width:1190px;
+    height:566;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.box {
+    width:397px;
+    height:566px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.large {
+    overflow: hidden;
+    width: 397px;
+    height: 365px;
+    cursor: pointer;
+    -webkit-transition: all 1s ease 0s;
+}
+
+.large:hover,.small:hover{
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,.3);
+    transform: scale(0.95);
+}
+
+.small {
+    overflow: hidden;
+    width: 398px;
+    height: 200px;
+    cursor: pointer;
+    -webkit-transition: all 1s ease 0s;
+}
+
+.news {
+    width: 1590px;
+    height: 687px;
+}
