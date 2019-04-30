@@ -1,4 +1,4 @@
-const isLeapYear=(year)=>{
+export const isLeapYear=(year)=>{
     if(year%400 === 0 || (year%4 ===0 && year%100 !== 0) ){
         return true
     }else {
@@ -6,7 +6,7 @@ const isLeapYear=(year)=>{
     }
 }
 
-const daysOfMonth=(month)=>{
+export const daysOfMonth=(month)=>{
     switch (month){
         case 0:
         case 2:
@@ -67,3 +67,54 @@ export default (
         }
     }
 )
+
+export class sessionUtil {
+    /**
+     * 保存
+     * @param key
+     * @param value
+     */
+    static save(key, value){
+        if (value == null){
+            return false;
+        }
+        try {
+            value = JSON.stringify(value);
+            window.sessionStorage.setItem(key, value);
+            window.log('保存成功');
+            return true;
+        }catch (e) {
+            window.log('保存失败');
+            return false;
+        }
+    }
+
+    /**
+     * 获取
+     */
+    static get(key){
+        try {
+            let value = window.sessionStorage.getItem(key);
+            if (value != null){
+                value = JSON.parse(value);
+            }
+            return value;
+        }catch (e) {
+            return null;
+        }
+    }
+
+    /**
+     * 清除
+     * @param key
+     * @returns {boolean}
+     */
+    static remove(key){
+        try {
+            window.sessionStorage.removeItem(key);
+            return true;
+        }catch (e) {
+            return false;
+        }
+    }
+}

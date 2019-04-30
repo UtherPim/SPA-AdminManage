@@ -1,4 +1,8 @@
-import { createBrowserHistory } from 'history'
+/*
+* 这里使用BrowserRouter,BrowserRouter基于HTML5的pushState 和replaceState,很多浏览器不支持，例如IE,360
+* 如果要兼容，最简单的方法是改成HashRouter，但是默认路由上会带个#
+* */
+import { createBrowserHistory, createHashHistory } from 'history'
 
 //应用上下文对象
 
